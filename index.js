@@ -6,7 +6,7 @@
 // increment/decrement when button clicked
 // change count-el in HTML to reflect clicks 
 let countEl = document.getElementById("count-el");
-console.log(countEl)
+// console.log(countEl)
 
 let count = 0;
 
@@ -20,3 +20,24 @@ function decrement () {
         countEl.innerText = count;
     }
 }
+
+let entryCountInstance = '';
+let entriesEl = document.getElementById('entries-el')
+function save() {
+    entryCountInstance += count + ', ';
+    console.log(entryCountInstance)
+    entriesEl.innerText = entryCountInstance;
+    // return entryCountInstance += count;
+}
+
+function reset() {
+    count = 0;
+    countEl.innerText = count;
+}
+function clear() {
+    // THIS FUNCTION DOES NOT WORK
+    entryCountInstance.replace(entryCountInstance, '');
+    entriesEl.innerText = entryCountInstance;
+}
+
+

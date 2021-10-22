@@ -19,9 +19,17 @@
                 <div class="buttons">
                     <button id="increment-btn" onclick="increment()">INCREMENT +</button>
                     <button id="decrement-btn" onclick="decrement()">DECREMENT -</button>
-                    <button id="save-btn">SAVE</button>
+                    <button id="save-btn" onclick="save()">SAVE</button>
+                    <button id="reset-btn" onclick="reset()">RESET</button>
                 </div>
             </div>
+        </div>
+        <div class="background">
+            <h2 class="entriesTitle">ENTRIES: </h2>
+            <div class="entries">
+                <p id="entries-el"></p>
+            </div>
+            <button id="clear-btn" onclick="clear()">CLEAR</button>
         </div>
     </div>
 </body>
