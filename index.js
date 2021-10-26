@@ -24,20 +24,18 @@ function decrement () {
 let entryCountInstance = '';
 let entriesEl = document.getElementById('entries-el')
 function save() {
-    entryCountInstance += count + ', ';
-    console.log(entryCountInstance)
-    entriesEl.innerText = entryCountInstance;
-    // return entryCountInstance += count;
-}
-
-function reset() {
+    entryCountInstance += count + ', '
+    entriesEl.textContent = entryCountInstance;
     count = 0;
     countEl.innerText = count;
 }
-function clear() {
-    // THIS FUNCTION DOES NOT WORK
-    entryCountInstance.replace(entryCountInstance, '');
-    entriesEl.innerText = entryCountInstance;
+// let eraseBtn = document.getElementById('erase-btn')
+
+function erase() {
+    entryCountInstance = '';
+    entriesEl.textContent = entryCountInstance
+    // entryCountInstance.slice(entryCountInstance.length - 1, )
+    // entriesEl.innerText = eraseBtn.innerText
 }
 
 
